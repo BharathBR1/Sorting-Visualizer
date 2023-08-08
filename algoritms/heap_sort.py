@@ -29,7 +29,7 @@ def heapify(arr, n, i, drawrectangle, delay):
     if largest != i:
         (arr[i], arr[largest]) = (arr[largest], arr[i])  # swap
         drawrectangle(arr, ['blue' if x == largest else 'green' if x ==
-                      i else 'red' for x in range(len(arr))])
+                      i else 'black' for x in range(len(arr))])
         time.sleep(delay)
 
 
@@ -54,19 +54,9 @@ def heapSort(arr, drawrectangle, delay):
     for i in range(n - 1, 0, -1):
         (arr[i], arr[0]) = (arr[0], arr[i])  # swap
         drawrectangle(arr, ['blue' if x == 0 else 'green' if x ==
-                      i else 'red' for x in range(len(arr))])
+                      i else 'black' for x in range(len(arr))])
         time.sleep(delay)
         heapify(arr, i, 0, drawrectangle, delay)
     drawrectangle(arr, ['blue' for x in range(len(arr))])
 
 
-# Driver code to test above
-
-# arr = [12, 11, 13, 5, 6, 7, ]
-# heapSort(arr)
-# n = len(arr)
-# print('Sorted array is')
-# for i in range(n):
-# 	print(arr[i])
-
-# This code is contributed by Mohit Kumra

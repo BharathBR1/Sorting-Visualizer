@@ -30,13 +30,13 @@ def partition(array, low, high, drawrectangle, delay):
             (array[i], array[j]) = (array[j], array[i])
             drawrectangle(array, ['blue' if x == i else 'green' if x ==
                           j else 'white' if x ==
-                          pivot else 'red' for x in range(len(array))])
+                          pivot else 'black' for x in range(len(array))])
             time.sleep(delay)
 
     # Swap the pivot element with the greater element specified by i
     (array[i + 1], array[high]) = (array[high], array[i + 1])
     drawrectangle(array, ['blue' if x == i+1 else 'green' if x ==
-                  high else 'red' for x in range(len(array))])
+                  high else 'black' for x in range(len(array))])
     time.sleep(delay)
     drawrectangle(array, ['blue' for x in range(len(array))])
 
